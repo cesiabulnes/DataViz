@@ -2,47 +2,59 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="utf-8">
-    <title>Suicide Rates</title>
+        <title>Bootstrap </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
-    <body>
+    <body onload="setupSVG('2000')">
+        <div id = "main">
+            <div class= "container1">
 
-        <!--  <div class="tabbable">
-            <ul class="nav nav-tabs">
-                <h5> Select among the following tabs to obtain different data</h5>
-                <button type="button" class="USA_tab" data-toggle="tab">USA</button>
-                <button type="button" class="btab" data-toggle="tab">B</button>
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane active" id="USA_tab">
-                    <h1>USA Suicide numbers</h1>
-                    <acontent></acontent>
+                <div class="page-header">
+                    <h1>Data Visualization Project for Suicide Deaths over the last 20 years</h1>      
                 </div>
-                <div class="tab-pane" id="b_tab">
-                    <h1>B</h1>
-                    <bcontent></bcontent>
-                </div>
+                <p>
+                    This Visualization project will be done to show the changes of suicide rates for USA over the last 20 years. 
+                </p>
+                <br>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <!-- div for graphs under the pagination-->
+                  <div id="my_dataviz">
+                    <svg id="my_dataviz2" height=300 width=450></svg>
+
+                  </div>
+
             </div>
         </div>
 
-        <script src="https://d3js.org/d3.v3.js"></script>
-
-        <script>
-            $.ajaxSetup ({
-                // Disable caching of AJAX responses
-                // Used when debugging
-                cache: false
-            });
-        
-            $.getScript("usa.js");
-            $(".USA_TAB").click(function() {
-                $.getScript("usa.js");
-            })
-        </script>
-        <script>
-            $(".btab").click(function() {
-                $.getScript("b.js");
-            })
-        </script> -->
     </body>
+<!-- Loading d3.js -->
+<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="usa.js"></script>
+
+
 </html>
