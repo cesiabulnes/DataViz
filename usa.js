@@ -228,7 +228,7 @@ function setupSVG() {
     
 
     async function loadAllData() {
-        const data = await d3.csv("https://raw.githubusercontent.com/cesiabulnes/DataViz/master/API_SH/Spercountryperyear.csv");
+        const data = await d3.csv("https://raw.githubusercontent.com/cesiabulnes/DataViz/master/API_SH/Spercountryperyearupdated.csv");
         console.log(data);
         console.log(typeof data);
         loadPageData(data);
@@ -278,7 +278,11 @@ function setupSVG() {
             return d.CountryName == "United States";
         });
         console.log('HERE')
-        console.log(first_country)
+
+        // Extract just the Country info from the object
+        var first_country_incomegroup = first_country.map(function (value, index) { return value['IncomeGroup']; });
+
+        console.log(first_country_incomegroup)
 
     }
     function loadPageData(data) {
