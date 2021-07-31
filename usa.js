@@ -228,7 +228,7 @@ function setupSVG() {
     
 
     async function loadAllData() {
-        const data = await d3.csv("https://raw.githubusercontent.com/cesiabulnes/DataViz/master/API_SH/API_SH.STA.SUIC.P5_DS2_en_csv_v2_2450992.csv");
+        const data = await d3.csv("https://raw.githubusercontent.com/cesiabulnes/DataViz/master/API_SH/Spercountryperyear.csv");
         console.log(data);
         console.log(typeof data);
         loadPageData(data);
@@ -275,8 +275,9 @@ function setupSVG() {
     //}
     function getDataAttr(data){
         let first_country = data.filter(function (d) {
-            return d.Country == "United States";
+            return d.CountryName == "United States";
         });
+        console.log('HERE')
         console.log(first_country)
 
     }
